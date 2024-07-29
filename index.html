@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,39 @@
             border: none;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            #noButton {
+                left: 5%;
+                top: 5%;
+            }
+
+            #yesButton {
+                bottom: 5%;
+                right: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            #noButton {
+            bottom: 25%;
+            right: 43%;
+        }
+        #yesButton {
+            bottom: 25%;
+            right: 50%;
+        }
         }
         #noButton {
             background-color: red;
@@ -44,6 +77,38 @@
     <h1>Sorry</h1>
     <button id="noButton" class="button">Nahi</button>
     <button id="yesButton" class="button">Thik hai</button>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+
+        noButton.addEventListener('click', () => {
+            window.location.href = 'page2.html';
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.open('final.html', '_blank');
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://media.tenor.com/SwQT4BBJS0oAAAAj/peach-and-goma-peach-goma.gif" alt="Image 1">
+        <h1>Sorry</h1>
+        <button id="noButton" class="button">Nahi</button>
+        <button id="yesButton" class="button">Thik hai</button>
+    </div>
 
     <script>
         const noButton = document.getElementById('noButton');

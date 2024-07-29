@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,6 +44,41 @@
     <h1>Maan Ja</h1>
     <button id="noButton" class="button">Nahi</button>
     <button id="yesButton" class="button">Thik hai</button>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+
+        noButton.addEventListener('click', () => {
+            window.location.href = 'page4.html';
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.open('final.html', '_blank');
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://media.tenor.com/JL0YrycH2gkAAAAj/peach-goma-crate-orange.gif" alt="Image 3">
+        <h1>Maan Ja be Chutiye</h1>
+        <div class="button-container">
+            <button id="noButton" class="button">Nahi</button>
+            <button id="yesButton" class="button">Thik hai</button>
+        </div>
+    </div>
 
     <script>
         const noButton = document.getElementById('noButton');
