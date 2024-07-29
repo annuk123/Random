@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .button {
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #yesButton {
+            background-color: green;
+            color: white;
+
+            bottom: 33%;
+            right: 50%;
+        }
+
+        #noButton {
+            background-color: rgb(171, 23, 3);
+            color: white;
+            bottom: 33%;
+            right: 43%;
+        }
+        img {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/df/a0/ce/dfa0ced5c6430c6ff5bbe4a7d2d9d1de.gif" alt="Image 5">
+    <h1>Manegi ya Nahi</h1>
+    <button id="yesButton" class="button">Thik hai</button>
+    <button id="noButton" class="button">Nahi </button>
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        yesButton.addEventListener('click', () => {
+            window.open('final.html', '_blank');
+        });
+
+        let moveInterval;
+
+        function moveButton() {
+            const x = Math.floor(Math.random() * (window.innerWidth - noButton.clientWidth));
+            const y = Math.floor(Math.random() * (window.innerHeight - noButton.clientHeight));
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+
+        noButton.addEventListener('click', () => {
+            moveInterval = setInterval(moveButton, 100);
+        });
+
+        yesButton.addEventListener('click', () => {
+            clearInterval(moveInterval);
+        });
+    </script>
+</body>
+</html>

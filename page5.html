@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .button {
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #noButton {
+            background-color: red;
+            color: white;
+            bottom: 25%;
+            right: 43%;
+        }
+        #yesButton {
+            background-color: green;
+            color: white;
+            bottom: 25%;
+            right: 50%;
+        }
+        img {
+            width: 70%;
+            max-width: 350px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/7a/51/a2/7a51a247b561aa70e9c0ef0fd141c1c0.gif" alt="Image 4">
+    <h1>Maan Ja Chutiye</h1>
+    <button id="noButton" class="button">No</button>
+    <button id="yesButton" class="button">Yes</button>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+
+        noButton.addEventListener('click', () => {
+            window.location.href = 'page6.html';
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.open('final.html', '_blank');
+        });
+    </script>
+</body>
+</html>

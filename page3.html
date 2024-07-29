@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        .button {
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #noButton {
+            background-color: red;
+            color: white;
+            bottom: 25%;
+            right: 43%;
+        }
+        #yesButton {
+            background-color: green;
+            color: white;
+            bottom: 25%;
+            right: 50%;
+        }
+        img {
+            width: 70%;
+            max-width: 350px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media.tenor.com/JL0YrycH2gkAAAAj/peach-goma-crate-orange.gif" alt="Image 3">
+    <h1>Maan Ja</h1>
+    <button id="noButton" class="button">No</button>
+    <button id="yesButton" class="button">Yes</button>
+
+    <script>
+        const noButton = document.getElementById('noButton');
+        const yesButton = document.getElementById('yesButton');
+
+        noButton.addEventListener('click', () => {
+            window.location.href = 'page4.html';
+        });
+
+        yesButton.addEventListener('click', () => {
+            window.open('final.html', '_blank');
+        });
+    </script>
+</body>
+</html>
